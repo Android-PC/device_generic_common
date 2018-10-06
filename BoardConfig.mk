@@ -105,13 +105,8 @@ BOARD_SEPOLICY_DIRS += device/generic/common/sepolicy \
 # Vendor Interface Manifest
 # DEVICE_MATRIX_FILE := device/generic/common/compatibility_matrix.xml
 
-# Bliss optimizations
-WITH_BLISS_CHARGER := false
-TARGET_PC_BUILD := true
-
-# Bliss OS specific 
-VER := 11.0
-RELEASE_OS_TITLE := Bliss-OS 
-BUILD_NAME_VARIANT := bliss-x86 
-INSTALL_PREFIX := bliss-x86-$(VER) 
-PREV_VERS := bliss-x86-6.4 bliss-x86-7.1.2 bliss-x86-8.0 bliss-x86-10.0 bliss-x86-10.1
+# Android-PC specific 
+VER := 1.0
+RELEASE_OS_TITLE := Android-PC 
+BUILD_NAME_VARIANT := android-x86 
+INSTALL_PREFIX := Android-PC-$(VER) 

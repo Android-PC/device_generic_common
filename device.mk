@@ -19,12 +19,6 @@ TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Inherit some common Bliss stuff.
-$(call inherit-product, vendor/bliss/config/common.mk)
-
-PRODUCT_COPY_FILES += \
-	vendor/bliss/prebuilt/common/etc/init.bliss.rc:system/etc/init/init.bliss.rc
-
 ifeq ($(USE_FOSS),true)
   $(call inherit-product-if-exists, vendor/foss/foss.mk)
   
@@ -45,13 +39,6 @@ endif
 ifneq ($(USE_OPENGAPPS),false)
   $(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 	
-  PRODUCT_COPY_FILES += \
-	vendor/bliss/config/empty-permission.xml:system/etc/permissions/com.google.android.camera2.xml \
-  	vendor/bliss/config/empty-permission.xml:system/etc/permissions/com.google.android.camera.experimental2015.xml \
-  	vendor/bliss/config/empty-permission.xml:system/etc/permissions/com.google.android.camera.experimental2016.xml \
-	vendor/bliss/config/empty-permission.xml:system/etc/permissions/com.google.android.camera.experimental2017.xml
-
-  DEVICE_PACKAGE_OVERLAYS += vendor/bliss/overlay-gapps
   GAPPS_VARIANT := nano
   DONT_DEXPREOPT_PREBUILTS := true
   WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
