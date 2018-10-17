@@ -19,6 +19,9 @@ TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOTANIMATION_HALF_RES := true
 
+# Inherit some common ROM stuff.
+$(call inherit-product-if-exists, vendor/*/config/common.mk)
+
 ifeq ($(USE_FOSS),true)
   $(call inherit-product-if-exists, vendor/foss/foss.mk)
   
