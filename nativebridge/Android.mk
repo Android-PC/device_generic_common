@@ -16,6 +16,7 @@ LOCAL_MODULE := libnb
 LOCAL_SRC_FILES := src/libnb.cpp
 LOCAL_CFLAGS := -Werror -Wall
 LOCAL_CPPFLAGS := -std=c++11
+LOCAL_LDFLAGS := -Wl,--version-script,$(LOCAL_PATH)/src/libnb.map
 LOCAL_SHARED_LIBRARIES := libcutils libdl liblog
 LOCAL_C_INCLUDES := system/core/libnativebridge/include
 LOCAL_MULTILIB := both

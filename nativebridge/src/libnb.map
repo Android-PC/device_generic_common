@@ -1,0 +1,7 @@
+LIBC_PLATFORM {
+  global:
+    android_get_application_target_sdk_version;
+    android_set_application_target_sdk_version;
+    android_get_exported_namespace;
+    android_update_LD_LIBRARY_PATH;
+};
